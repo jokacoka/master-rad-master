@@ -1,0 +1,170 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+    <title>Elektronska lekcija o primeni odredjenog integrala</title>
+</head>
+
+<body>
+    <header>
+        <h1>Површина фигуре у равни - квадратура</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a>
+                </li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+            </ul>
+        </nav>
+        <section class="example">
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 1.</span></strong> Израчунати површину фигуре ограничене параболом `y = x^2`, `x`-осом и правама `x=a` и `x=b`.</p>
+            
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Фигура о којој је реч је један криволинијски трапез. Зато је њена површина `P`,
+                према ономе што је наведено у тексту задатка: </p>
+            <p>\[ P=∫_{a}^bx^2 dx=\frac{x^3}{3}|_{a}^b=\frac{1}{3}(b^3-a^3). \]</p>
+            <br>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.2.1.png" />
+                    <figcaption>Криволинијски трапез ограничен правама `x=a` и `x=b` </figcaption>
+                </figure>
+            </div>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 2.</span></strong> Израчунати површину фигуре ограничене правом `y=x` и параболом `y=2-x^2`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Нађимо апсцисе пресечних тачака праве и параболе решавањем система једначина:
+            </p>
+            <p> \[y=x,\ y=2-x^2.\]</p>
+
+            <p> Када смо решили систем, добили смо: \[x_1=-2 \quad и\quad  x_2=1.\] То ће и бити границе интеграције. Тражена површина
+                је:
+            <p>\[
+                P=∫_{-2}^1[(2-x^2)-x]dx=\left(2x-\frac{x^3}{3}-\frac{x^2}{2}\right)|_{-2}^1=\left(2-\frac{-2}{1}-\frac{1}{2}\right)-\left(-4+\frac{8}{3}-2\right)=\frac{9}{2}.
+                \]</p>
+            <br>    
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.1.3.png" />
+                    <figcaption>Фигура ограничена правом `y=x` и параболом `y=2-x^2` </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 3.</span></strong> Израчунати површину фигуре ограничене параболом `y=x^2` и правом `y+x=2`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> На самом почетку задатка треба одредити границе, тачније апсцисе пресечних
+                тачака дате параболе и праве. Решавањем система \[y=x^2 \quad и\quad  y=2-x\] добијамо тражене апсцисе \[x_1=1\quad и\quad x_2=-2.\]
+                Подинтегралну функцију формирамо тако што од једначине праве одузмемо једначину параболе. </p>
+
+            <p>
+            <p>\[
+                P=∫_{-2}^1(2-x-x^2)dx=∫_{-2}^12dx-∫_{-2}^1xdx-∫_{-2}^1x^2dx=2x|_{-2}^1-\frac{x^2}{2}|_{-2}^1-\frac{x^3}{3}|_{-2}^1=2\left(1-\left(-2\right)\right)-\frac{1}{2}\left(1^2-\left(-2\right)^2\right)-\frac{1}{3}\left(1^3-\left(-2\right)^3\right)=\frac{9}{2}.
+                \]</p>
+            <br>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.1.4.png" />
+                    <figcaption>Фигура ограничена параболом `y=x^2` и правом `y+x=2` </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 4.</span></strong> Израчунати површину фигуре ограничене кривом `y=2^x` и правама `y=2` и `x=0` .</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Границе настале фигуре ћемо одредити решавањем два система. Решавање система \[y=2^x\quad и\quad
+                y=2\] нам даје апсцису `x=1`, друга апсциса је `x=0`. Тражена површина се добија разликом једначине праве
+                `y=2` и једначином експоненцијалне функције `y=2^x`. </p>
+
+            <p>\[ P=∫_{0}^1(2-2^x)dx=∫_{0}^12dx-∫_{0}^12^xdx=2x|_{0}^1-\frac{2^x}{ln2}|_{0}^1=2-\frac{1}{ln2} \]</p>
+            <br>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.1.5.png" />
+                    <figcaption>Површина фигуре ограничене кривом `y=2^x` и правама `y=2` и `x=0` </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 5.</span></strong> Израчунати површину фигуре ограничене кривама `y = \frac{x^2}{2}` и `x^2+y^2=8`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Да бисмо одредили границе настале фигуре решавамо систем и добијамо да су решења
+                `x=2` и `x=-2`. </p>
+            <p> \[y^2=8-x^2, y=\pm\sqrt{8-x^2};\] </p>
+            <p>\[P=∫_{-2}^2(\sqrt{8-x^2}-\frac{x^2}{2})dx=2∫_{0}^2\sqrt{8-x^2}dx-∫_{0}^2\frac{x^2}{2}dx=2\pi+\frac{4}{3}.\]</p>
+            <br>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.1.6.png" />
+                    <figcaption>Површина фигуре ограничене кривом `y=2^x` и правама `y=2` и `x=0` </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 6.</span></strong> У ком односу парабола `y^2=2x` дели површину круга `x^2+y^2=8`? </p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Нека је `S_1` површина круга, а `S_2` површина коју чине параболички и кружни сегмент. Очигледно, `S_1=8\pi`. Решавањем система једначина: \[y^2= 2x \quad и\quad x^2+y^2=8\] добијамо апсцису
+                `x=2` пресечне тачке параболе и круга. Сада је: </p>
+            <p>\[
+                S_2=2\left(2\pi-\int_{0}^{2}\left(\sqrt{8-x^2}-\sqrt{2x}\right)dx\right)=2\left(2\pi-\int_{0}^{2}\sqrt{8-x^2}+\left.\
+                \frac{2}{3}\sqrt2x^\frac{3}{2}\right|_0^2\right)=2\left(2\pi+\frac{8}{3}-4\int_{0}^{\frac{\pi}{4}}\left(1+cos2t\right)dt\right)=2\pi+\frac{4}{3}.
+                \]</p>
+            <p> \[\left(S_1-S_2\right):S_2=\left(8\pi-2\pi-\frac{4}{3}\right):S_2=\left(9\pi-2\right):\left(3\pi+2\right).\]
+            </p>
+            <br>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.1.7.png" />
+                    <figcaption>Површина фигуре ограничене кривом `y=2^x` и правама `y=2` и `x=0` </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+					<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+
+        </section>
+
+    </main>
+</body>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</html>

@@ -1,0 +1,146 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+    <title>Elektronska lekcija iz matematike</title>
+</head>
+
+<body>
+    <header>
+        <h1>Електронске лекције о примени одређеног интеграла</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a>
+                </li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+            </ul>
+        </nav>
+
+        <section class="example1">
+            <h2><center>Теорија помоћу које решавамо задатке код примене одређеног интеграла</center></h2>
+            <h3><span style="color: #387C44;"> `\cdot `Својства одређеног интеграла </span></h3>
+            <p style="text-indent: 40px;"> Познавање својстава одређеног интеграла веома је важно при изучавању овог појма. Навешћемо основна
+                својства одређеног интеграла. </p>
+
+            <p style="text-indent: 20px;">1. Ако је функција `f` интеграбилна на одсечку `[a,b]` тада је за било који реалан број `k` и функција `kf`
+                интеграбилна на истом одсечку и важи једнакост: </p>
+            <p>\[∫_{a}^bkf(x)dx=k∫_{a}^bf(x)dx.\]</p>
+            <p style="text-indent: 20px;"> 2. Ако су функције `f` и `g` интеграбилне на одсечку `[a,b]`, тада су и функције `f+g` и `f-g` интеграбилне на
+                истом одсечку и важи једнакост: </p>
+            <p>\[∫_{a}^b‍f\left(x\right)±g\left(x\right)dx=∫_{a}^bf\left(x\right)dx\pm∫_{a}^bg\left(x\right)dx.\]</p>
+            <p style="text-indent: 20px;"> 3. Ако постоји `∫_{a}^bf(x)dx` и ако је `c` произвољна тачка између `a` и `b`, тада постоје и
+                    интеграли `∫_{a}^cf(x)dx` и `∫_{c}^bf(x)dx`, и важи једнакост: 
+                    <p>\[∫_{a}^bf(x)dx=∫_{a}^cf(x)dx+∫_{c}^bf(x)dx.\]</p>
+            </p>
+            <p style="text-indent: 20px;"> 4. Ако је функција `f` интеграбилна на одсечку `[a,b]` и \(f(x) \geq 0\) за \(x \in [a, b]\), тада је:  </p>
+            <p> \[∫_{a}^bf(x)dx\geq0.\]</p>
+            <p style="text-indent: 20px;"> 5. Нека су `f` и `g` интеграбилне функције на одсечку `[a,b]` и нека је \(f(x) \geq g(x)\) за \(x \in [a, b]\). Тада важи неједнакост:</p>
+            <p> \[∫_{a}^bf(x)dx\geq∫_{a}^bg(x)dx.\]</p>
+            <p style="text-indent: 20px;"> 6. Ако је функција `f` интеграбилна на одсечку `[a,b]`, тада је и функција `|f|` интеграбилна на истом одсечку и важи неједнакост:  </p>
+            <p> \[ ∫_{a}^bf(x)dx\le∫_{a}^b\left|f\left(x\right)\right|dx.\] </p>
+
+            <h3><span style="color: #387C44;"> `\cdot `Њунт-Лајбницова формула </span></h3>
+            <p style="text-indent: 20px;"> <em>Теорема 1.</em> Нека је `f` функција дефинисана и непрекидна на одсечку `[a,b]` и нека је `\Phi` функција дефинисана на следећи начин:  </p>
+            <p> \[\Phi\left(\beta\right)=β‍f(x)dx,    β∈a,b. \]</p>
+            <p> Тада је `\Phi` једна примитивна функција функције `f`. </p>
+            <p style="text-indent: 20px;"> <em>Теорема 2.</em> Њутн-Лајбницова теорема. Ако је `f` функција дефинисана и непрекидна на одсечку `[a,b]` и ако је `F` било која њена примитивна функција, тада важи једнакост: </p>
+            <p> \[ ∫_{a}^bf(x)dx = F\left(b\right)-F\left(a\right)\] </p>
+
+            <h3><span style="color: #387C44;"> `\cdot `Површина </span></h3>
+            <p style="text-indent: 20px;"><em>Теорема.</em> Нека је функција `f` дефинисана и непрекидна на одсечку `[a,b]` и нека је \(f(x) \geq 0\) за \(x \in [a, b]\). Тада је површина `P` криволинијског трапеза испод криве `y=f(x)`, над одсечком `[a,b]`, једнака одређеном интегралу функције `f` на одсечку `[a,b]`, односно: </p>
+            <p> \[P=∫_{a}^bf(x)dx.\]</p>
+
+            <img class="centered-figure" src="slika3.1.png" />
+            <div class="image-container">
+             <figure class="slika">
+               <figcaption>Површина криволинијског трапеза</figcaption>
+             </figure>
+         </div>
+
+            <h3><span style="color: #387C44;"> `\cdot `Дужина лука криве </span></h3>
+            <p style="text-indent: 20px;"> <em>Теорема.</em> Нека је у равни `О х у` задата крива `y=f(x)`, где је функција `f` непрекидна и има непрекидан извод на одсечку `[a,b]`. Тада дужина лука `l` дате криве од тачке са апсцисом `a` до тачке са апсцисом `b` износи: </p>
+            <p> \[l=∫_{a}^b\sqrt{1+f'(x)^2}dx.\]</p>
+
+            <h3><span style="color: #387C44;"> `\cdot `Запремина </span></h3>
+            <p style="text-indent: 20px;"><em>Теорема.</em> Нека је функција `f` дефинисана и непрекидна на одсечку `[a,b]` и нека је \(f(x) \geq 0\) за свако \(x \in [a, b]\). Тада је запремина обртног тела `K`, које настаје обртањем око x-осе криволинијског трапеза испод криве `y=f(x)` над одсечком `[a,b]` једнака:  </p>
+            <p> \[ V(K)=\pi∫_{a}^bf(x)^2dx \] </p>
+
+            <img class="centered-figure" src="zapremina.png" />
+            <div class="image-container">
+             <figure class="slika">
+               <figcaption>Површина криволинијског трапеза</figcaption>
+             </figure>
+         </div>
+
+            <h3><span style="color: #387C44;"> `\cdot `Површина задата параметарски </span></h3>
+            <p style="text-indent: 20px;"><em>Теорема.</em> Површина равне фигуре, ограничене кривом, која је задата у параметарском облику.
+                Ако су `x = x(t), \quad y = y(t), \quad 0 \leq t \leq T` параметарске једначине део по део глатке просто затворене криве `C`, орјентисане у смеру супротном кретању казаљке на сату и ограничавајући слева од себе површину `S`, онда је: 
+                </p>
+            <p> \[S=-\int_{0}^{T}y\left(t\right)x^\prime\left(t\right)dt=\int_{0}^{T}x\left(t\right)y^\prime\left(t\right)dt\quad или\quad S=\frac{1}{2}\int_{0}^{T}\left(x\left(t\right)y^\prime\left(t\right)-y\left(t\right)x^\prime\left(t\right)\right)dt. \]</p>
+            
+            <h3><span style="color: #387C44;"> `\cdot `Површина у поларним координатама </span></h3>
+            <p style="text-indent: 20px;"><em>Теорема.</em> Површина `S` равне фигуре `OAB`, ограничена графиком непрекидне функције `\rho=\rho\left(\varphi\right)` и двема полуравнима `\varphi=\alpha и \varphi=\beta\left(\alpha<\beta\right)`, једнака је:
+                 </p>
+            <p> \[S=\frac{1}{2}\int_{\alpha}^{\beta}\rho^2\left(\varphi\right)d\varphi.\] </p>     
+            
+            <h3><span style="color: #387C44;"> `\cdot `Дужина лука криве дате параметарски </span></h3>
+            <p style="text-indent: 20px;"><em>Теорема.</em> Ако је крива дата једначинама `x=x\left(t\right),y=y\left(t\right)\ \left(t_0\le t\le T\right)`, где су `x,y`  непрекидно диференцијабилне функције на сегменту `[t_0, T]`, онда је `L`  дужина лука криве једнака:
+                </p>    
+            <p> \[ L=\int_{t_0}^{T}\sqrt{\left(x^\prime\left(t\right)\right)^2+\left(y^\prime\left(t\right)\right)^2}dt. \]</p>     
+            
+            <h3><span style="color: #387C44;"> `\cdot `Дужина лука криве дате у поларним координатама </span> </h3>
+            <p style="text-indent: 20px;"><em>Теорема.</em>  Ако је `\rho=\rho\left(\varphi\right)\left(\alpha\le\varphi\le\beta\right)`, где је `\rho` непрекидно диференцијабилне функција на сегменту `\left[\alpha,\beta\right]`, онда је `L` дужина лука криве:
+                 </p> 
+            <p> \[L=\int_{\alpha}^{\beta}\sqrt{\rho^2\left(\varphi\right)+\rho^\prime\left(\varphi\right)^2}d\varphi.\]</p>        
+
+
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+
+        </section>
+
+    </main>
+</body>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</html>

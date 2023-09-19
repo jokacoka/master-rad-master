@@ -1,0 +1,99 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+
+
+    <title>Elektronska lekcija iz matematike</title>
+</head>
+
+<body>
+    <header>
+        <h1>Електронске лекције о примени одређеног интеграла</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a></li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+            </ul>
+        </nav>
+        <section class="example1">
+            <p style="text-indent: 40px;"> Одређени интеграл је концепт у математици који се широко примењује у разним областима. Он омогућава
+                израчунавање површине испод криве, дужине криве, волумена ротационог тела и решавање многих других
+                проблема који се сусрећу у математичкој анализи, физици, инжењерингу и економији и другим наукама.
+                Одређени интеграл се користи за израчунавање вредности функције на одређеном интервалу. </p>
+                
+            <p style="text-indent: 40px;"> Овај интеграл се
+                често користи за израчунавање површине испод криве функције. На пример, можемо користити одређени
+                интеграл да бисмо израчунали површину фигура правоугаоника, троугла или елипсе. Такође се може користити
+                за израчунавање површине испод криве функције која није елементарна функција.</p>
+
+            <p style="text-indent: 40px;">  
+                Одређени интеграл има примену у рачунању дужине криве. Помоћу овог интеграла можемо израчунати
+                укупну дужину криве линије која се не може једноставно изразити помоћу основних геометријских формула.
+                Ово је посебно корисно у физици и инжењерингу, где се често сусрећемо са кривим линијама као што су
+                путање пројектила или криве у електромагнетној теорији.
+            </p>
+            <p style="text-indent: 40px;">
+                Друга важна примена одређеног интеграла је у израчунавању запремине ротационих тела. Користећи овај
+                интеграл, можемо израчунати запремину ротационих фигура које настају ротирањем одређене криве око
+                одређене осе. Ово је корисно у физици, посебно при проучавању ротационих тела попут ваљка или купа.
+                Осим наведених примера, одређени интеграл се користи у многим другим областима.</p>
+
+            <p style="text-indent: 40px;"> У економији се користи
+                за израчунавање укупних прихода или укупне потрошње на основу функција. У физици се користи за
+                израчунавање масе, центра масе и момента инерције.
+                Укратко, примена одређеног интеграла је широка и разноврсна. Овај математички концепт омогућава нам да
+                решимо проблеме везане за површине, дужине, запремине и многе друге квантитативне карактеристике
+                различитих облика. Без њега, многе од ових проблема би биле тешко или немогуће решити на прецизан начин.
+            </p>
+            <!--<p> Линк на коме се налази рад и који садржи мноштво примера и додатну теорију</p>
+            <br>
+            <iframe src="Masterrad.pdf" width="600" height="800" type="application/pdf" ></iframe>
+            <br> -->
+            <img src="pocetna.jpg" alt="Opis prve slike" style="width: 100%; max-width: 600px; display: block; margin: auto; margin-top: 20px;">
+        		<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+
+		</section>
+
+    </main>
+</body>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</html>

@@ -1,0 +1,142 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+
+
+    <title>Elektronska lekcija o primeni odredjenog integrala</title>
+</head>
+
+<body>
+    <header>
+        <h1>Запремина обратних тела</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a></li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+            </ul>
+        </nav>
+        <section class="example">
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 1.</span></strong> Наћи запремину тела добијеног ротацијом око `x`-осе фигуре ограничене кривама
+                \[ y=x^2+1 \quad и\quad  y=2.\]
+            </p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Укупну запремину добијамо разликом запремина насталих тела ротацијом:
+                \[V=V_1-V_2.\]
+                Решавамо систем, да бисмо добили границе:
+            </p>
+            <p>\[ \left.\ \begin{matrix}y=x^2+1\\y=2\\\end{matrix}\right\}\ \Longrightarrow\ 2=x^2+1\ \Longrightarrow\
+                x^2-1=0\ \Longrightarrow\ \left(x-1\right)\left(x+1\right)=0\Longrightarrow\ x=1\land\ x=-1; \]</p>
+            <p>Затим рачунамо појединачно запремине `V_1 и V_2`:
+                \[V_1=\pi∫_{-1}^12^2dx=4πx|_{-1}^1=4π(1+1)=8π;\]
+                \[V_2=π∫_{-1}^1(x^2+1)^2dx=π∫_{-1}^1(x^4+2x^2+1)dx=π[\frac{x^5}{5}+\frac{2x^3}{3}+x]|_{-1}^1=\
+                \pi\left(\frac{1}{5}+\frac{2}{3}+1+\frac{1}{5}+\frac{2}{3}+1\right)=\frac{56}{15}\pi.\]
+
+            <p>Крајње решење: \[ V=V_1-V_2=8\pi-\frac{56}{15}\pi=\frac{64}{15}\pi.\]</p>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.3.3.png" />
+                    <figcaption>Тело добијено ротацијом око `x`-осе фигуре ограничене кривама </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 2.</span></strong> У тачки `P(3,2)` криве `y^2=2(x-1)` конструисана је тангента. Израчунати запремину тела које
+                настаје ротацијом око `x`-осе фигуре ограничене овом тангентом датом кривом и `x`-осом.
+            </p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Укупну запремину добијамо разликом запремина насталих тела ротацијом: \[V=V_1-V_2.\]
+            </p>
+            <p>\[ \left.\ \begin{matrix}y=x^2+1\\y=2\\\end{matrix}\right\}\ \Longrightarrow\ 2=x^2+1\ \Longrightarrow\
+                x^2-1=0\ \Longrightarrow\ \left(x-1\right)\left(x+1\right)=0\Longrightarrow\ x=1\land\ x=-1; \]</p>
+            <p>Затим рачунамо појединачно запремине `V_1 и V_2`:
+                \[V_1=\pi∫_{-1}^3(\frac{1}{2}x+\frac{1}{2})^2dx=π∫_{-1}^3(\frac{1}{4}x^2+\frac{1}{2}x+\frac{1}{4})dx=
+                π∫_{-1}^3\frac{1}{4}x^2dx+π∫_{-1}^3\frac{1}{2}xdx+π∫_{-1}^3\frac{1}{4}dx=\]
+				\[\frac{1}{4}π\frac{x^3}{3}|_{-1}^3+\frac{1}{2}π\frac{x^2}{2}|_{-1}^3+\frac{1}{4}πx|_{-1}^3=\frac{π}{4}\frac{28}{3}+\frac{π}{2}\frac{8}{2}+\frac{π}{4}⋅4=73π+2π+π=163π.\]
+                \[V_2=π∫_{-1}^1(x^2+1)^2dx=π∫_{-1}^1(x^4+2x^2+1)dx=π[\frac{x^5}{5}+\frac{2x^3}{3}+x]|_{-1}^1=\
+                \pi\left(\frac{1}{5}+\frac{2}{3}+1+\frac{1}{5}+\frac{2}{3}+1\right)=\frac{56}{15}\pi.\]
+
+            <p>Крајње решење: \[ V=V_1-V_2=\frac{16\pi}{3}-4\pi=\frac{4\pi}{3}.\]</p>
+            <p>Једначина тангенте: \[t:\ \ \ \ y-2=k(x-3);\]</p>
+            <p>\[t:y-2=\frac{1}{2}x-\frac{3}{2}\ \Longrightarrow\ t:y=\frac{1}{2}x+\frac{1}{2}\Rightarrow\
+                y=0\Rightarrow\ x=-1.\]</p>
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.3.4.png" />
+                    <figcaption>Тело које настаје ротацијом око `x`-осе фигуре ограничене о тангентом, датом кривом и
+                        x-осом </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 3.</span></strong> Израчунати запремину тела које настаје ротацијом фигуре, ограничене кривама `y=lnx,y=ln^2x`,
+                око `x`-осе.
+            </p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Укупну запремину добијамо разликом запремина насталих тела ротацијом:
+                \[V=V_1-V_2.\]
+                Решавамо систем, да бисмо добили границе:
+            </p>
+            <p>\[ \left.\ \begin{matrix}y=ln\ x\\y=ln^2x\\\end{matrix}\right\}\ \Longrightarrow\ lnx=ln^2x\ \
+                \Longrightarrow\ lnx\left(ln\ x-1\right)=0\Longrightarrow\ lnx=0\ \ \vee\ \ lnx=1;\ \]</p>
+            <p>Затим рачунамо појединачно запремине `V_1` и `V_2`:
+                \[V_1=\pi∫_{-1}^eln^2xdx=\begin{Bmatrix}
+                lnx=t\ \ \ \ \ x=1\rightarrow t=0 & \\ 
+                \frac{dx}{x}=dt\ \ \ x=e\rightarrow t=1 & 
+                \end{Bmatrix}=\int_{0}^{1}{t^2e^tdt=\left\{\begin{matrix}\ \ \ \ \ \ \ u=t^2\ \ \ \ \ \ e^tdt=dv\ \\du=2tdt\ \ \ \ \ e^t=v\ \\\end{matrix}\right\}}=\left.t^2e^t\right|_0^1-\int_{0}^{1}{2te^tdt=}π(e-2).\]
+                \[V2=π∫_{-1}^1ln^4xdx=\pi(9e-24)\Rightarrow V=\pi\left(e-2\right)-\pi\left(9e-24\right)\ \Rightarrow
+                V=(e-2-9e+24)-\pi(22-8e)\]
+
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.3.5.png" />
+                    <figcaption>Тело добијено ротацијом око `x`-осе фигуре ограничене кривама </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+				<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+        </section>
+
+    </main>
+</body>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</html>

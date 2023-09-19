@@ -1,0 +1,133 @@
+body {
+    font-family: Monaco, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    /*background-color: #4a73598f;*/
+    background-color: #4E9258;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem; */
+}
+
+.lesson {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.lesson h2 {
+    margin-top: 0;
+}
+
+.grey-text {
+    color: #888;
+}
+
+
+.slika {
+    text-align: center;
+}
+
+.centered-figure {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.example {
+    margin-left: 20px;
+    margin-right: 70px;
+    text-align: justify;
+    margin-left: inherit;
+    border-left: 0px solid black;
+    font-family:  'Arial Narrow', Arial, sans-serif;
+    border-left: 1px solid #387C44;
+    line-height: 1.5;
+    padding-left: 70px;
+    
+}
+
+.example1 {
+    margin-left: 20px;
+    margin-right: 70px;
+    text-align: justify;
+    margin-left: inherit;
+    border-left: 0px solid black;
+    color: #333;
+    border-left: 1px solid #387C44;
+    padding-left: 70px;
+    font-family:  'Arial Narrow', Arial, sans-serif;
+    font-size: 110%;
+    line-height: 1.5;
+    
+}
+
+nav {
+    z-index: 999999;
+    /*width: 100%;*/
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-bottom: 1px solid black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 10px;
+}
+
+section {
+    /*width: 100%;*/
+}
+/*
+.navbar {
+   position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    z-index: 1000;
+}*/
+
+.logo {
+    display: inline-block;
+}
+
+.nav-links {
+    list-style: none;
+    /*position: fixed;*/
+}
+
+.nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item {
+    display: inline; 
+}
+
+.nav-item:hover {
+    background-color: white;
+}
+
+.nav-item:hover a {
+    color: #4E9258;
+}
+
+.logo img {
+    width: 175px;
+    vertical-align: middle;
+}

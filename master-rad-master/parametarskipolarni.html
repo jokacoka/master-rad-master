@@ -1,0 +1,186 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+	<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+    <title>Elektronska lekcija o primeni odredjenog integrala</title>
+</head>
+
+<body>
+    <header>
+        <h1>Фигуре у параметарском и поларном облику</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a>
+                </li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+            </ul>
+        </nav>
+        <section class="example">
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 1.</span></strong> Наћи површину повши која се добија ротацијом `x^\frac{2}{3}+y^\frac{2}{3}=a^\frac{2}{3}`
+                око осе `Ox`.
+            </p>
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Параметарске једначине астроиде имају облик \[x=a\cos^3t;y=a\sin^3t; \left(0\le
+                t\le2\pi\right),\] тада је \[dl=3a\left|sin\ tcos\ t\right|dt.\] Узимајући у обзир симетричност криве у
+                односу на обе координатне осе, имамо:</p>
+            <p>\[\begin{matrix}P&=4\pi\int_{0}^{\frac{\pi}{2}}y\left(t\right)dl\left(t\right)=12\pi
+                a^2\int_{0}^{\frac{\pi}{2}}\sin^4td\left(sin\ t\right)=\left.\ \frac{12}{5}\pi
+                a^2\sin^5t\right|_0^{\frac{\pi}{2}}=\frac{12}{5}\pi a^2\\&\\\end{matrix}.\]
+
+            <div class="image-container">
+                <figure class="slika">
+					<div id="ggb-element">
+						<script>  
+    var params = {"material_id": "tfymbwke", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+<iframe src="https://www.geogebra.org/classic/tfymbwke?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+					</div> 
+                    <figcaption>Фигура ограничена кривама које су дате параметарски </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 2.</span></strong> Наћи површину фигуре ограничене кривама које су дате параметарски \[x=2t-t^2,\ \
+                y=2t^2-t^3.\]
+            </p>
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Крива сама себе сече у координатном почетку: `x=0` за `t=0` i `t=2; y=0` такође за
+                `t=0` и `t=2`. За израчунавање површине користићемо формулу:</p>
+            <p>\[\begin{matrix}S&=\frac{1}{2}\int_{0}^{2}\left(x\left(t\right)y^\prime\left(t\right)-y\left(t\right)x^\prime\left(t\right)\right)dt=\frac{1}{2}\int_{0}^{2}\left(t^4-4t^3+4t^2\right)dt=\left.\
+                \frac{1}{2}\left(\frac{t^5}{5}-t^4+\frac{4}{3}t^3\right)\right|_0^2=4\left(\frac{4}{3}-2+\frac{4}{5}\right)=\frac{8}{15}.\\&\\\end{matrix}\].
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika4.1.2.png" />
+                    <figcaption>Фигура ограничена кривама које су дате параметарски </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 3.</span></strong> Наћи површину фигуре ограничене кривама које су дате параметарски
+                \[x=a\left(2cos\ t-\cos{2t}\right);y=a\left(2sin\ t-\sin{2t}\right).\]
+            </p>
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Фигура је ограничена и затворена
+                \[\left(x\left(0\right)=x\left(2\pi\right);y\left(0\right)=y\left(2\pi\right)\right),\] следи:</p>
+            <p>\[S=\frac{1}{2}\int_{0}^{2\pi}\left(x\left(t\right)y^\prime\left(t\right)-x^\prime\left(t\right)y\left(t\right)\right)dt=a^2\int_{0}^{2\pi}\left(3-3cos t\right)dt=6\pi a^2.\]
+            <div class="image-container">
+                <figure class="slika">
+					<div id="ggb-element">
+						<script>  
+    var params = {"material_id": "qcukgndk", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+<iframe src="https://www.geogebra.org/classic/qcukgndk?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+					</div> 
+                    <figcaption>Фигура која настаје ротацијом астроидае око Ox осе </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 4.</span></strong> Наћи дужину лука криве задату параметарски \[x=a\left(t-sin\
+                t\right);y=a\left(1-\cos{t}\right), 0\le t\le2\pi.\]</h2>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Примењујемо формулу за дужину лика криве задате параметирски , самим тим рачунамо
+                \[x^\prime\left(t\right)=a\left(1-cos\ t\right),\
+                \mathcal{V}^\prime\left(t\right)=asint;\ x^{\prime2}\left(t\right)+y^2\left(t\right)=2a^2\left(1-cos\
+                t\right)=4a^2\sin^2\frac{t}{2}
+                :\]</p>
+
+            <p> \[L=2a\int_{0}^{2\pi}sin\frac{t}{2}dt=4a\int_{0}^{a}sin\ zdz=\left.\ 4acos\ z\right|_0^\pi=8a.\]
+            <div class="image-container">
+                <figure class="slika">
+					<div id="ggb-element">
+						<script>  
+    var params = {"material_id": "kmg4vk5y", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+<iframe src="https://www.geogebra.org/classic/kmg4vk5y" width="800" height="600"
+allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+					</div> 
+                    <figcaption> Дужина лука криве задате параметарски </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 5.</span></strong> Наћи дужину лука криве задату параметарски \[x=a\left(t-sin\
+                t\right);y=a\left(1-\cos{t}\right), 0\le t\le2\pi.\]</h2>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Примењујемо формулу за дужину лика криве задате параметирски, самим тим рачунамо
+                \[x^\prime\left(t\right)=atcost;y^\prime\left(t\right)=atsint;
+                x^{\prime2}\left(t\right)+y^{\prime2}\left(t\right)=a^2t^2:\]</p>
+
+            <p> \[L=a\int_{0}^{2\pi}tdt=\left.\ \frac{at^2}{2}\right|_0^{2\pi}=2\pi^2a.\]
+            <div class="image-container">
+                <figure class="slika">
+					<div id="ggb-element">
+						<script>  
+    var params = {"material_id": "p5fvd2tq", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+<iframe src="https://www.geogebra.org/classic/p5fvd2tq?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+                    </div>
+                    <figcaption> Дужину лука криве задату параметарски </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+					<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+
+        </section>
+
+    </main>
+</body>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</html>

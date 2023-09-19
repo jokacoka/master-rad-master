@@ -1,0 +1,142 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="ASCIIMathML.js"></script>
+	<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+    <title>Elektronska lekcija o primeni odredjenog integrala</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Дужина лука криве</h1>
+    </header>
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a>
+                </li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+            </ul>
+        </nav>
+        <section class="example">
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 1.</span></strong> Израчунати дужину лука криве `y=\frac{2}{3}x^{3/2}` од координатног почетка до тачке
+                `(8,\frac{32\sqrt2}{3})`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Непосредно на основу формуле добијамо:</p>
+
+            \[l=∫_{0}^8\sqrt{1+\left(x^{1/2}\right)^2}dx=∫_{0}^8\sqrt{1+x}dx=∫_{0}^8(1+x)^\frac{1}{2}dx=\frac{(1+x)^\frac{3}{2}}{\frac{3}{2}}|_{0}^8=\frac{52}{3}
+            \]
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.1.1.png" />
+                    <figcaption>Дужина лука криве од координатног почетка до тачке </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 2.</span></strong> Израчунати дужину лука криве `y^2=x^3` од тачке `(0,0)` до тачке `(4, 8)`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Непосредно на основу формуле добијамо:</p>
+
+            \[l=∫_{0}^4\sqrt{1+\frac{9x}{4}}dx=\frac{4}{9}∫_{0}^{10}
+            t^\frac{1}{2}dt=\frac{4}{9}\frac{t^\frac{3}{2}}{\frac{3}{2}}|_{0}^{10}=\frac{8}{27}(10\sqrt10-1) \]
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.2.2.png" />
+                    <figcaption>Дужина лука криве од координатног почетка до тачке </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 3.</span></strong> Израчунај дужину лука криве `x = \frac{1}{4}y^2 - \frac{1}{2}\ln y` за `1 \leq y \leq e`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Приметимо да је крива облика `x=f(y)`, па се зато границе одређеног интеграла
+                посматрају по променљивој `y`.</p>
+
+            \[l=∫_{1}^e\sqrt{1+x^{\prime2}}dy=∫_{1}^e\sqrt{1+\frac{1}{4}\left(y-\frac{1}{y}\right)^2}dx=\frac{1}{2}∫_{1}^e\left(\frac{1}{y}+y\right)dy=\frac{1}{4}\left(1+e^2\right).
+            \]
+            <div class="image-container">
+                <figure class="slika">
+                    <img class="centered-figure" src="slika3.2.5.png" />
+                    <figcaption>Дужина лука криве за `1 \leq y \leq e` </figcaption>
+                </figure>
+            </div>
+            </p>
+            <br>
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 4.</span></strong> Израчунати дужину лука параболе `y=\frac{x^2}{2p}` на интервалу `[0,a],a>0`.</p>
+
+            <p><strong><span style="color: #347235;">Решење.</span></strong> </p>
+
+            \[l=∫_{0}^a\sqrt{1+y^{\prime2}}dx=\frac{1}{p}∫_{0}^{a}\sqrt{x^2+p^2}dx=\frac{1}{p}(\frac{1}{2}x\sqrt{x^2+p^2}+\frac{p^2}{2}ln(x+\sqrt{x^2+p^2}))|_{0}^{a}=\frac{a}{2p}\sqrt{a^2+p^2}+\frac{p}{2}ln\frac{a+\sqrt{a^2+p^2}}{p}.
+            \]
+            <div class="image-container">
+                <figure class="slika">
+					<div id="ggb-element">
+						<script>  
+    var params = {"material_id": "duadfxvq", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+					</div> 
+
+                    <figcaption> Дужина лука параболе на интервалу `[0,a]` </figcaption>
+                </figure>
+            </div>
+        </p>
+        <br>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+
+        </section>
+
+    </main>
+</body>
+<script>
+    window.onload = function () {
+        /*document.getElementById("header").focus();*/
+        window.scrollTo(0, 0);
+    };
+</script>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+
+</html>

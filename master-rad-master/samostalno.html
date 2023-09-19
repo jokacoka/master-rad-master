@@ -1,0 +1,87 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: { linebreaks: { automatic: true } },
+  "HTML-CSS": { linebreaks: { automatic: true } },
+         SVG: { linebreaks: { automatic: true } }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="ASCIIMathML.js"></script>
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+
+    <title>Elektronska lekcija o primeni odredjenog integrala</title>
+</head>
+<body>
+    <header>
+        <h1>Електронске лекције о примени одређеног интеграла</h1>
+    </header>    
+    <main>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="pocetna.html">Почетна</a></li>
+                <li class="nav-item"><a href="teorija.html">Одређени интеграл</a></li>
+                <li class="nav-item"><a href="kvadratura.html">Површина фигуре у равни - квадратура</a></li>
+                <li class="nav-item"><a href="luk.html">Дужина лука криве</a></li>
+                <li class="nav-item"><a href="kubatura.html">Запремина обртних тела</a></li>
+                <li class="nav-item"><a href="parametarskipolarni.html">Фигуре у параметарском и поларном облику</a></li>
+                <li class="nav-item"> <a href="samostalno.html">Самостална визуализација</a></li>
+                <li class="nav-item"> <a href="Masterrad.pdf">Додатни материјал: PDF</a></li>
+                
+                
+            </ul>
+        </nav>
+	  <section class="example">
+            
+            <p>На овој страници можете самостално нацртати и визуално приказати било који задатак у програму Геогебра, како бисте олакшали саму израду затка и боље разумели оно што се од Вас тражи.</p>
+            <br>
+            <p>Срећно!</p>
+            
+			<div class="image-container">
+				<figure  class="slika">
+					<div id="ggb-element">
+						<script>  
+    var params = {"material_id": "z7dkwbww", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() { 
+        applet.inject('ggb-element');
+    });
+</script>
+					</div> 
+					
+				</figure>
+			</div>
+            <br>
+            <br>   
+					<button onclick="topFunction()" id="myBtn" title="Go to top">Vratite se na vrh</button>
+
+        </section>
+		
+    </main>
+</body>
+<script>
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+</script>
+</html>
