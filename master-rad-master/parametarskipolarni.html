@@ -40,15 +40,16 @@ MathJax.Hub.Config({
             </ul>
         </nav>
         <section class="example">
-            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 1.</span></strong> Наћи површину повши која се добија ротацијом `x^\frac{2}{3}+y^\frac{2}{3}=a^\frac{2}{3}`
-                око осе `Ox`.
-            </p>
-            <p><strong><span style="color: #347235;">Решење.</span></strong> Параметарске једначине астроиде имају облик \[x=a\cos^3t;y=a\sin^3t; \left(0\le
-                t\le2\pi\right),\] тада је \[dl=3a\left|sin\ tcos\ t\right|dt.\] Узимајући у обзир симетричност криве у
-                односу на обе координатне осе, имамо:</p>
-            <p>\[\begin{matrix}P&=4\pi\int_{0}^{\frac{\pi}{2}}y\left(t\right)dl\left(t\right)=12\pi
-                a^2\int_{0}^{\frac{\pi}{2}}\sin^4td\left(sin\ t\right)=\left.\ \frac{12}{5}\pi
-                a^2\sin^5t\right|_0^{\frac{\pi}{2}}=\frac{12}{5}\pi a^2\\&\\\end{matrix}.\]
+
+            
+                <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 1.</span></strong> Наћи дужину лука криве задату параметарски \[x=a\left(t-sin\
+                    t\right);y=a\left(1-\cos{t}\right), 0\le t\le2\pi.\]</h2>
+    
+                <p><strong><span style="color: #347235;">Решење.</span></strong> Примењујемо формулу за дужину лика криве задате параметирски, самим тим рачунамо
+                    \[x^\prime\left(t\right)=atcost;y^\prime\left(t\right)=atsint;
+                    x^{\prime2}\left(t\right)+y^{\prime2}\left(t\right)=a^2t^2:\]</p>
+    
+                <p> \[L=a\int_{0}^{2\pi}tdt=\left.\ \frac{at^2}{2}\right|_0^{2\pi}=2\pi^2a.\]
 
             <div class="image-container">
                 <figure class="slika">
@@ -67,6 +68,7 @@ MathJax.Hub.Config({
             </div>
             </p>
             <br>
+
             <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 2.</span></strong> Наћи површину фигуре ограничене кривама које су дате параметарски \[x=2t-t^2,\ \
                 y=2t^2-t^3.\]
             </p>
@@ -100,7 +102,7 @@ MathJax.Hub.Config({
 </script>
 <iframe src="https://www.geogebra.org/classic/qcukgndk?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 					</div> 
-                    <figcaption>Фигура која настаје ротацијом астроидае око Ox осе </figcaption>
+                    <figcaption>Фигура која настаје ротацијом астроиде око Ox осе </figcaption>
                 </figure>
             </div>
             </p>
@@ -134,14 +136,15 @@ allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborde
             </div>
             </p>
             <br>
-            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 5.</span></strong> Наћи дужину лука криве задату параметарски \[x=a\left(t-sin\
-                t\right);y=a\left(1-\cos{t}\right), 0\le t\le2\pi.\]</h2>
-
-            <p><strong><span style="color: #347235;">Решење.</span></strong> Примењујемо формулу за дужину лика криве задате параметирски, самим тим рачунамо
-                \[x^\prime\left(t\right)=atcost;y^\prime\left(t\right)=atsint;
-                x^{\prime2}\left(t\right)+y^{\prime2}\left(t\right)=a^2t^2:\]</p>
-
-            <p> \[L=a\int_{0}^{2\pi}tdt=\left.\ \frac{at^2}{2}\right|_0^{2\pi}=2\pi^2a.\]
+            <p style="font-size: 160%;"><strong><span style="color: #347235;">Задатак 5.</span></strong> Наћи површину повши која се добија ротацијом `x^\frac{2}{3}+y^\frac{2}{3}=a^\frac{2}{3}`
+                око осе `Ox`.
+            </p>
+            <p><strong><span style="color: #347235;">Решење.</span></strong> Параметарске једначине астроиде имају облик \[x=a\cos^3t;y=a\sin^3t; \left(0\le
+                t\le2\pi\right),\] тада је \[dl=3a\left|sin\ tcos\ t\right|dt.\] Узимајући у обзир симетричност криве у
+                односу на обе координатне осе, имамо:</p>
+            <p>\[\begin{matrix}P&=4\pi\int_{0}^{\frac{\pi}{2}}y\left(t\right)dl\left(t\right)=12\pi
+                a^2\int_{0}^{\frac{\pi}{2}}\sin^4td\left(sin\ t\right)=\left.\ \frac{12}{5}\pi
+                a^2\sin^5t\right|_0^{\frac{\pi}{2}}=\frac{12}{5}\pi a^2\\&\\\end{matrix}.\]
             <div class="image-container">
                 <figure class="slika">
 					<div id="ggb-element">
@@ -152,7 +155,7 @@ allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborde
         applet.inject('ggb-element');
     });
 </script>
-<iframe src="https://www.geogebra.org/classic/p5fvd2tq?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/classic/tfymbwke?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
                     </div>
                     <figcaption> Дужину лука криве задату параметарски </figcaption>
                 </figure>
